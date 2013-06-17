@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+  	"curl": "jeremyg484/curl#0.8.0-dev"
+  }
+}

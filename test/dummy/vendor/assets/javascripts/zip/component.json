@@ -1,0 +1,5 @@
+{
+    "name": "zip",
+    "version": "1.0.0",
+	"main": ["./zip.gif", "./zip.js", "./zip.css"]
+}

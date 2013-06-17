@@ -1,0 +1,18 @@
+(function(curl) {
+
+	var config = {
+		baseUrl: '/assets',
+		//paths: {
+			// Configure paths that aren't loaded by convention here
+		//},
+		packages: [
+		<% @package_defs = package_defs() %>
+		<% @package_defs.each_with_index do |(n, pkg), index| %>
+			<%= "{name: '#{pkg[:name]}', location: '#{pkg[:location]}', main: '#{pkg[:main]}'}" %><%= "," if index < @package_defs.size - 1 %>
+		<% end %>
+		]
+	};
+
+	curl(config, ['main']);
+
+})(curl);
